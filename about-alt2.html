@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Michelle Xiong</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Public+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          paper: '#F4F1E8',
+          paper2: '#EFEBE0',
+          ink: '#201E1A',
+          inksoft: '#4A4842',
+          teal: '#165648',
+          tealdeep: '#10352E',
+          ochre: '#E4A72E',
+          ochretext: '#674B15',
+          line: '#D8D3C6',
+        },
+        fontFamily: {
+          serif: ['Fraunces', 'Georgia', 'serif'],
+          sans: ['Public Sans', 'system-ui', 'sans-serif'],
+          mono: ['Spline Sans Mono', 'monospace'],
+        },
+      },
+    },
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { -webkit-font-smoothing: antialiased; }
+
+  /* Bracket corner framing — pure CSS, no images */
+  .bracket { position: relative; }
+  .bracket::before, .bracket::after {
+    content: ""; position: absolute; width: 14px; height: 14px; pointer-events: none;
+  }
+  .bracket::before { top: -1px; left: -1px; border-top: 1.5px solid currentColor; border-left: 1.5px solid currentColor; }
+  .bracket::after { bottom: -1px; right: -1px; border-bottom: 1.5px solid currentColor; border-right: 1.5px solid currentColor; }
+
+  .glass { background: rgba(251,249,243,0.6); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+
+  .fade { opacity: 0; transform: translateY(14px); animation: rise .7s ease forwards; }
+  .fade.d1 { animation-delay: .06s; } .fade.d2 { animation-delay: .14s; }
+  @keyframes rise { to { opacity: 1; transform: none; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fade { animation: none; opacity: 1; transform: none; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body class="bg-paper text-ink font-sans" style="font-size:17px; line-height:1.6;">
+
+<nav class="sticky top-0 z-30 glass border-b border-line">
+  <div class="max-w-[1180px] mx-auto px-5 md:px-7 h-16 flex items-center justify-between gap-3">
+    <a href="index-alt2.html" class="font-serif font-semibold text-base md:text-lg tracking-tight shrink-0">Michelle Xiong</a>
+    <div class="flex items-center gap-3.5 md:gap-7 font-mono text-[11.5px] md:text-[13px] text-inksoft overflow-x-auto">
+      <a href="index-alt2.html" class="hover:text-ink transition-colors whitespace-nowrap">// Work</a>
+      <a href="about-alt2.html" class="text-teal whitespace-nowrap">// About</a>
+      <a href="#contact" class="hover:text-ink transition-colors whitespace-nowrap">// Contact</a>
+    </div>
+    <a href="#contact" class="shrink-0 font-mono text-[11px] md:text-[12px] uppercase tracking-widest bg-ink text-paper px-3 md:px-4 py-2 rounded-sm hover:bg-teal transition-colors">Say hello</a>
+  </div>
+</nav>
+
+<header class="pt-16 pb-10 border-b border-line">
+  <div class="max-w-[1180px] mx-auto px-7">
+    <p class="fade font-mono text-[12px] tracking-[0.18em] uppercase text-teal mb-6">// About</p>
+    <h1 class="fade d1 font-serif leading-[1.06] tracking-tight text-[clamp(2.1rem,4.6vw,3.6rem)] max-w-[15ch] mb-7">
+      <span class="font-semibold">Learner. Educator. Designer.</span> <span class="italic font-normal text-teal">In that order, honestly.</span>
+    </h1>
+    <p class="fade d2 text-[18px] max-w-[62ch]">
+      I spent nearly a decade in higher education before I became a UX designer — as an academic advisor, a lecturer, a student-services lead, and once, a student-government CEO. People sometimes treat that as the thing I did <em>before</em> design. I see it as the reason my design is any good.
+    </p>
+  </div>
+</header>
+
+<section class="py-14 border-b border-line">
+  <div class="max-w-[680px] mx-auto px-7">
+    <h2 class="font-serif text-2xl md:text-[34px] mb-6 max-w-[20ch]">I've spent years on the other side of the desk.</h2>
+    <p class="mb-5 text-[16.5px]">For most of my career, my job was to help people find their way through systems that weren't built for them — enrollment, advising, graduation requirements, the hold on your account you didn't see coming. I've sat with the anxious first-year, the returning parent, the student one form away from giving up.</p>
+    <p class="text-[16.5px]">So when I design a flow now, I'm not imagining the person on the other side of the screen. I've met them. Many times. That's the instinct I brought into UX, and it's the one I trust most.</p>
+  </div>
+</section>
+
+<section class="py-14 border-b border-line">
+  <div class="max-w-[1180px] mx-auto px-7">
+    <p class="font-mono text-[12px] tracking-widest uppercase text-teal mb-8">// What a decade in education gave me</p>
+    <div class="grid md:grid-cols-2 gap-x-10 gap-y-8">
+      <div class="bracket text-teal pt-5">
+        <span class="block font-mono text-[11px] tracking-widest uppercase text-teal mb-3">Advising</span>
+        <h3 class="font-serif text-xl text-ink mb-2">How to listen for the real problem</h3>
+        <p class="text-inksoft text-[15.5px] max-w-[42ch]">The thing someone asks for is rarely the thing they need. Advising trained me to hear the problem underneath the problem.</p>
+      </div>
+      <div class="bracket text-ochretext pt-5">
+        <span class="block font-mono text-[11px] tracking-widest uppercase text-teal mb-3">Teaching</span>
+        <h3 class="font-serif text-xl text-ink mb-2">How to make hard things learnable</h3>
+        <p class="text-inksoft text-[15.5px] max-w-[42ch]">I lectured to rooms of eighty to a hundred students. If you can teach a capstone, you can make an interface make sense.</p>
+      </div>
+      <div class="bracket text-teal pt-5">
+        <span class="block font-mono text-[11px] tracking-widest uppercase text-teal mb-3">Institutional research</span>
+        <h3 class="font-serif text-xl text-ink mb-2">How to turn data into a decision</h3>
+        <p class="text-inksoft text-[15.5px] max-w-[42ch]">I surveyed trends to find at-risk students and presented the findings to leadership. Research only matters if it moves someone to act.</p>
+      </div>
+      <div class="bracket text-ochretext pt-5">
+        <span class="block font-mono text-[11px] tracking-widest uppercase text-teal mb-3">Student government</span>
+        <h3 class="font-serif text-xl text-ink mb-2">How to move an idea through a room</h3>
+        <p class="text-inksoft text-[15.5px] max-w-[42ch]">As a student-government CEO I advocated for change at the university and state level. I know how to get buy-in, not just consensus.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-14 border-b border-line">
+  <div class="max-w-[680px] mx-auto px-7">
+    <h2 class="font-serif text-2xl md:text-[34px] mb-6">What I believe about design</h2>
+    <p class="mb-5 text-[16.5px]">I believe good design is inclusive and accessible — and that isn't an abstract principle for me. Several people in my family are color blind, so I grew up watching them get locked out of things that were never designed with them in mind. <span class="font-medium border-b-2 border-ochre pb-0.5">Accessibility is the first question I ask, not the last box I check.</span></p>
+    <p class="text-[16.5px]">I'm also, unapologetically, a process person. Advising taught me that the experience is the whole journey, not just the moment someone touches your product. I map the system, find where people fall through, and design the path that catches them. I came back to UX because I missed being creative — but what kept me here is that UX is creative <em>and</em> strategic. It has a process. I like that it has a process.</p>
+  </div>
+</section>
+
+<section class="py-14 border-b border-line">
+  <div class="max-w-[680px] mx-auto px-7">
+    <h2 class="font-serif text-2xl md:text-[34px] mb-6">How I work</h2>
+    <p class="mb-8 text-[16.5px]">I work best across roles. At ABIRC I was the only designer, which meant translating between small-business vendors, community members, and internal staff — and shipping anyway. In higher ed I facilitated trainings and workshops, coordinated research across departments, and presented findings to executive leadership. I'm comfortable being the person who sits between the people with the need and the people with the power, and makes sure they actually understand each other.</p>
+    <div class="bracket text-ochretext glass px-8 py-7">
+      <p class="font-serif italic text-xl md:text-2xl leading-snug text-ink">I think with my hands. I sketch, I sew, I make things to figure them out. And I'd rather show you a rough version early than protect a perfect one in private.</p>
+    </div>
+  </div>
+</section>
+
+<section class="relative py-20 bg-tealdeep text-[#EDE9DF] overflow-hidden">
+  <div class="absolute inset-0 opacity-[0.0224]" style="background-image:linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px); background-size:42px 42px;"></div>
+  <div class="max-w-[1180px] mx-auto px-7 relative">
+    <p class="font-mono text-[12px] tracking-widest uppercase text-[#A5CDC1] mb-5">// Where I'm different</p>
+    <h2 class="font-serif text-[clamp(1.7rem,3.6vw,2.6rem)] text-[#F6F3EA] mb-10 max-w-[20ch]">What you can't get from a bootcamp alone</h2>
+    <div class="grid md:grid-cols-2 gap-5">
+      <div class="bracket text-[#A5CDC1] px-6 py-6">
+        <span class="block font-mono text-[11px] tracking-widest text-[#A5CDC1] mb-3">01</span>
+        <h3 class="text-[#F6F3EA] text-lg font-medium mb-2">I've been the user</h3>
+        <p class="text-[#BFD8CF] text-[15px] max-w-[40ch]">A decade inside higher education means I design for students, advisors, and administrators as someone who has been all three.</p>
+      </div>
+      <div class="bracket text-[#A5CDC1] px-6 py-6">
+        <span class="block font-mono text-[11px] tracking-widest text-[#A5CDC1] mb-3">02</span>
+        <h3 class="text-[#F6F3EA] text-lg font-medium mb-2">I own the whole thing</h3>
+        <p class="text-[#BFD8CF] text-[15px] max-w-[40ch]">At ABIRC I ran the research, the design, and the website itself — solo, end to end, on real timelines and a real budget.</p>
+      </div>
+      <div class="bracket text-[#A5CDC1] px-6 py-6">
+        <span class="block font-mono text-[11px] tracking-widest text-[#A5CDC1] mb-3">03</span>
+        <h3 class="text-[#F6F3EA] text-lg font-medium mb-2">I do research in two languages</h3>
+        <p class="text-[#BFD8CF] text-[15px] max-w-[40ch]">Institutional data analysis on one side, human advising conversations on the other. I trust both, and I know how to connect them.</p>
+      </div>
+      <div class="bracket text-[#A5CDC1] px-6 py-6">
+        <span class="block font-mono text-[11px] tracking-widest text-[#A5CDC1] mb-3">04</span>
+        <h3 class="text-[#F6F3EA] text-lg font-medium mb-2">Accessibility is lived, not learned</h3>
+        <p class="text-[#BFD8CF] text-[15px] max-w-[40ch]">It came from my family, not a curriculum. That makes it a design reflex, not a compliance step.</p>
+      </div>
+      <div class="bracket text-[#A5CDC1] px-6 py-6">
+        <span class="block font-mono text-[11px] tracking-widest text-[#A5CDC1] mb-3">05</span>
+        <h3 class="text-[#F6F3EA] text-lg font-medium mb-2">I speak stakeholder</h3>
+        <p class="text-[#BFD8CF] text-[15px] max-w-[40ch]">Teaching, facilitation, and a public-policy background taught me to move ideas through rooms — not just present them in decks.</p>
+      </div>
+      <div class="bracket text-[#A5CDC1] px-6 py-6">
+        <span class="block font-mono text-[11px] tracking-widest text-[#A5CDC1] mb-3">06</span>
+        <h3 class="text-[#F6F3EA] text-lg font-medium mb-2">I build for community</h3>
+        <p class="text-[#BFD8CF] text-[15px] max-w-[40ch]">I speak Hmong and have deep community ties. I design with the people I'm designing for, not just about them.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-14 border-b border-line">
+  <div class="max-w-[680px] mx-auto px-7">
+    <h2 class="font-serif text-2xl md:text-[34px] mb-6">When I'm not designing</h2>
+    <p class="mb-7 text-[16.5px]">I'm a lover of learning first and always. Beyond that, I'm a serious foodie (most of my budget has strong opinions about food), a paper crafter and maker, a writer who processes life by putting it into words, and someone who takes Friday-night video games seriously.</p>
+    <div class="flex flex-wrap gap-2">
+      <span class="text-[12px] font-mono bg-teal/10 text-teal rounded-sm px-3 py-1.5">Lifelong learner</span>
+      <span class="text-[12px] font-mono bg-teal/10 text-teal rounded-sm px-3 py-1.5">Foodie</span>
+      <span class="text-[12px] font-mono bg-ochre/10 text-ochretext rounded-sm px-3 py-1.5">Paper crafts &amp; sewing</span>
+      <span class="text-[12px] font-mono bg-teal/10 text-teal rounded-sm px-3 py-1.5">Writer</span>
+      <span class="text-[12px] font-mono bg-ochre/10 text-ochretext rounded-sm px-3 py-1.5">Hmong speaker</span>
+      <span class="text-[12px] font-mono bg-teal/10 text-teal rounded-sm px-3 py-1.5">Friday-night gamer</span>
+    </div>
+  </div>
+</section>
+
+<footer class="relative bg-tealdeep text-[#EDE9DF] py-[70px] overflow-hidden" id="contact">
+  <div class="absolute inset-0 opacity-[0.0224]" style="background-image:linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px); background-size:42px 42px;"></div>
+  <div class="max-w-[1180px] mx-auto px-7 relative">
+    <p class="font-mono text-[12px] tracking-widest uppercase text-[#A5CDC1] mb-5">// Let's connect</p>
+    <h2 class="font-serif text-[clamp(1.7rem,4vw,2.75rem)] text-[#F6F3EA] max-w-[18ch] mb-7">If any of this sounds like your kind of designer, say hi.</h2>
+    <div class="flex flex-wrap gap-8 text-[17px] mb-11">
+      <a href="mailto:michellec.xiong@gmail.com" class="text-[#F6F3EA] border-b-2 border-ochre pb-1 font-medium hover:text-ochre transition-colors">michellec.xiong@gmail.com</a>
+      <a href="https://www.linkedin.com/in/michellecxiong" target="_blank" rel="noopener" class="text-[#F6F3EA] border-b-2 border-ochre pb-1 font-medium hover:text-ochre transition-colors">LinkedIn</a>
+      <a href="index-alt2.html" class="text-[#F6F3EA] border-b-2 border-ochre pb-1 font-medium hover:text-ochre transition-colors">See the work</a>
+    </div>
+    <div class="flex flex-wrap justify-between gap-4 border-t border-white/15 pt-6 font-mono text-[12.5px] text-[#A5CDC1] tracking-wide">
+      <span>Michelle Xiong — UX designer, researcher, educator</span>
+      <span>Portland, Oregon</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Michelle Xiong — UX Designer, Researcher, Educator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Public+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          paper: '#F4F1E8',
+          paper2: '#EFEBE0',
+          ink: '#201E1A',
+          inksoft: '#4A4842',
+          teal: '#165648',
+          tealdeep: '#10352E',
+          ochre: '#E4A72E',
+          ochretext: '#674B15',
+          line: '#D8D3C6',
+        },
+        fontFamily: {
+          serif: ['Fraunces', 'Georgia', 'serif'],
+          sans: ['Public Sans', 'system-ui', 'sans-serif'],
+          mono: ['Spline Sans Mono', 'monospace'],
+        },
+      },
+    },
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { -webkit-font-smoothing: antialiased; }
+
+  /* Bracket corner framing — pure CSS, no images */
+  .bracket { position: relative; }
+  .bracket::before, .bracket::after {
+    content: ""; position: absolute; width: 14px; height: 14px; pointer-events: none;
+  }
+  .bracket::before { top: -1px; left: -1px; border-top: 1.5px solid currentColor; border-left: 1.5px solid currentColor; }
+  .bracket::after { bottom: -1px; right: -1px; border-bottom: 1.5px solid currentColor; border-right: 1.5px solid currentColor; }
+  .bracket-full::before { top: -1px; left: -1px; border-top: 1.5px solid currentColor; border-left: 1.5px solid currentColor; width: 14px; height: 14px; content:""; position:absolute; }
+
+  .glass { background: rgba(251,249,243,0.6); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+
+  /* Faint graph-paper / blueprint grid, generated with pure CSS gradients */
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(27,107,90,0.09) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(27,107,90,0.09) 1px, transparent 1px);
+    background-size: 42px 42px;
+    -webkit-mask-image: radial-gradient(ellipse 90% 90% at 60% 40%, #000 30%, transparent 78%);
+    mask-image: radial-gradient(ellipse 90% 90% at 60% 40%, #000 30%, transparent 78%);
+  }
+
+  /* Flowing data-line animation on the generative journey diagram */
+  .flow { stroke-dasharray: 6 10; animation: flow 5s linear infinite; }
+  .flow.slow { animation-duration: 8s; animation-direction: reverse; }
+  @keyframes flow { to { stroke-dashoffset: -160; } }
+
+  .pulse { animation: pulse 3.2s ease-in-out infinite; transform-origin: center; }
+  .pulse.d2 { animation-delay: .8s; }
+  .pulse.d3 { animation-delay: 1.6s; }
+  @keyframes pulse { 0%,100% { opacity:.55; transform:scale(1); } 50% { opacity:1; transform:scale(1.35); } }
+
+  .fade { opacity: 0; transform: translateY(14px); animation: rise .7s ease forwards; }
+  .fade.d1 { animation-delay: .06s; } .fade.d2 { animation-delay: .14s; } .fade.d3 { animation-delay: .22s; }
+  @keyframes rise { to { opacity: 1; transform: none; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fade { animation: none; opacity: 1; transform: none; }
+    .flow, .pulse { animation: none; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body class="bg-paper text-ink font-sans" style="font-size:17px; line-height:1.6;">
+
+<nav class="sticky top-0 z-30 glass border-b border-line">
+  <div class="max-w-[1180px] mx-auto px-5 md:px-7 h-16 flex items-center justify-between gap-3">
+    <a href="index.html" class="font-serif font-semibold text-base md:text-lg tracking-tight shrink-0">Michelle Xiong</a>
+    <div class="flex items-center gap-3.5 md:gap-7 font-mono text-[11.5px] md:text-[13px] text-inksoft overflow-x-auto">
+      <a href="index-alt2.html" class="text-teal whitespace-nowrap">// Work</a>
+      <a href="about-alt2.html" class="hover:text-ink transition-colors whitespace-nowrap">// About</a>
+      <a href="#contact" class="hover:text-ink transition-colors whitespace-nowrap">// Contact</a>
+    </div>
+    <a href="#contact" class="shrink-0 font-mono text-[11px] md:text-[12px] uppercase tracking-widest bg-ink text-paper px-3 md:px-4 py-2 rounded-sm hover:bg-teal transition-colors">Say hello</a>
+  </div>
+</nav>
+
+<!-- HERO — split pane -->
+<header class="relative overflow-hidden border-b border-line">
+  <div class="max-w-[1180px] mx-auto px-7 grid lg:grid-cols-2 gap-10 lg:gap-4 items-center py-14 lg:py-0 lg:min-h-[640px]">
+
+    <!-- LEFT: type + CTA + stats -->
+    <div class="relative z-10 lg:py-16">
+      <p class="fade font-mono text-[12px] tracking-[0.18em] uppercase text-teal mb-6">// UX Designer · Researcher · Educator — Portland, OR</p>
+      <h1 class="fade d1 font-serif leading-[1.03] tracking-tight text-[clamp(2.4rem,5.2vw,4.4rem)] mb-7">
+        <span class="font-semibold">Good design should let</span><br>
+        <span class="italic font-normal text-teal">everyone</span> <span class="font-semibold">in.</span>
+      </h1>
+      <p class="fade d2 text-[18px] max-w-[46ch] mb-4">
+        I'm <span class="font-serif font-medium">Michelle Xiong</span>. For nearly a decade I worked in higher education — advising students through every step of their journey, teaching classrooms of eighty, and digging through the data to find the people the system was quietly leaving behind.
+      </p>
+      <p class="fade d2 text-[18px] max-w-[46ch] mb-9">
+        I design the way I advised: <span class="font-medium border-b-2 border-ochre pb-0.5">listen first, map the whole journey, and build something people can actually use.</span>
+      </p>
+
+      <div class="fade d3 flex flex-wrap items-center gap-4 mb-14">
+        <a href="#work" class="inline-flex items-center gap-2 bg-teal text-paper font-medium text-[15px] px-6 py-3 rounded-sm hover:bg-tealdeep transition-colors">
+          See selected work <span>&rarr;</span>
+        </a>
+      </div>
+
+      <!-- Stat boxes — real, stated facts, not invented metrics -->
+      <div class="fade d3 grid grid-cols-3 gap-3 max-w-[520px]">
+        <div class="bracket glass text-teal px-4 py-3.5">
+          <span class="block font-serif text-2xl text-ink">~10</span>
+          <span class="block font-mono text-[10px] uppercase tracking-widest text-inksoft mt-1">Years in higher ed</span>
+        </div>
+        <div class="bracket glass text-ochretext px-4 py-3.5">
+          <span class="block font-serif text-2xl text-ink">80</span>
+          <span class="block font-mono text-[10px] uppercase tracking-widest text-inksoft mt-1">Students per lecture</span>
+        </div>
+        <div class="bracket glass text-teal px-4 py-3.5">
+          <span class="block font-serif text-2xl text-ink">02</span>
+          <span class="block font-mono text-[10px] uppercase tracking-widest text-inksoft mt-1">Sole-designer case studies</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: generative "journey map" diagram -->
+    <div class="relative hidden lg:block h-full min-h-[560px]">
+      <div class="absolute inset-0 bg-grid"></div>
+      <div class="absolute inset-0" style="background: radial-gradient(circle at 62% 42%, rgba(228,167,46,0.16), transparent 42%), radial-gradient(circle at 40% 60%, rgba(27,107,90,0.16), transparent 46%);"></div>
+
+      <svg viewBox="0 0 480 480" class="absolute inset-0 w-full h-full" style="filter:drop-shadow(0 0 1px rgba(0,0,0,0));">
+        <!-- flowing journey path -->
+        <path d="M 60 380 C 140 380 120 260 200 250 S 280 140 260 90 S 380 60 420 100" fill="none" stroke="#165648" stroke-width="1.6" opacity="0.55" class="flow"/>
+        <path d="M 70 120 C 130 160 160 220 230 230 S 330 300 300 360 S 400 400 430 360" fill="none" stroke="#E4A72E" stroke-width="1.4" opacity="0.5" class="flow slow"/>
+        <path d="M 100 60 C 160 100 150 200 220 210" fill="none" stroke="#4A4842" stroke-width="1" opacity="0.3" stroke-dasharray="2 6"/>
+
+        <!-- nodes -->
+        <circle cx="60" cy="380" r="4" fill="#165648"/>
+        <circle cx="200" cy="250" r="5" fill="#165648" class="pulse"/>
+        <circle cx="260" cy="90" r="5" fill="#E4A72E" class="pulse d2"/>
+        <circle cx="420" cy="100" r="4" fill="#165648"/>
+        <circle cx="300" cy="360" r="5" fill="#E4A72E" class="pulse d3"/>
+        <circle cx="70" cy="120" r="3.5" fill="#4A4842" opacity="0.6"/>
+
+        <!-- HUD connector lines -->
+        <line x1="200" y1="250" x2="130" y2="250" stroke="#201E1A" stroke-width="1" opacity="0.28"/>
+        <line x1="260" y1="90" x2="345" y2="70" stroke="#201E1A" stroke-width="1" opacity="0.28"/>
+        <line x1="300" y1="360" x2="365" y2="400" stroke="#201E1A" stroke-width="1" opacity="0.28"/>
+      </svg>
+
+      <!-- HUD labels: her own 3-step philosophy -->
+      <div class="bracket glass absolute px-3 py-2 font-mono text-[10.5px] uppercase tracking-widest text-teal" style="left:6%; top:50%;">
+        Listen <span class="text-inksoft normal-case tracking-normal block text-[10px] mt-0.5">first, always</span>
+      </div>
+      <div class="bracket glass absolute px-3 py-2 font-mono text-[10.5px] uppercase tracking-widest text-ochretext" style="left:73%; top:12%;">
+        Map <span class="text-inksoft normal-case tracking-normal block text-[10px] mt-0.5">the whole journey</span>
+      </div>
+      <div class="bracket glass absolute px-3 py-2 font-mono text-[10.5px] uppercase tracking-widest text-ochretext" style="left:77%; top:80%;">
+        Build <span class="text-inksoft normal-case tracking-normal block text-[10px] mt-0.5">what people use</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- PILLARS -->
+<section class="py-16 border-b border-line">
+  <div class="max-w-[1180px] mx-auto px-7 grid md:grid-cols-3 gap-8">
+    <div class="bracket text-teal pt-5">
+      <span class="block font-mono text-[11px] tracking-widest uppercase text-teal mb-3">01 — Perspective</span>
+      <h3 class="font-serif text-xl text-ink mb-2">I've been the user.</h3>
+      <p class="text-inksoft text-[15.5px]">A decade inside higher education means I design for students, advisors, and staff as someone who has sat in all three chairs.</p>
+    </div>
+    <div class="bracket text-ochretext pt-5">
+      <span class="block font-mono text-[11px] tracking-widest uppercase text-teal mb-3">02 — Approach</span>
+      <h3 class="font-serif text-xl text-ink mb-2">I think in systems.</h3>
+      <p class="text-inksoft text-[15.5px]">Advising taught me to see the whole journey, not just the screen in front of me. I look for where people fall through, and design the path that catches them.</p>
+    </div>
+    <div class="bracket text-teal pt-5">
+      <span class="block font-mono text-[11px] tracking-widest uppercase text-teal mb-3">03 — Principle</span>
+      <h3 class="font-serif text-xl text-ink mb-2">I design for access.</h3>
+      <p class="text-inksoft text-[15.5px]">Inclusive, accessible design isn't a box I check at the end. Several people in my family are color blind — so for me, it's personal.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SELECTED WORK -->
+<main id="work" class="py-20">
+  <div class="max-w-[1180px] mx-auto px-7">
+    <div class="flex flex-wrap items-baseline justify-between gap-4 mb-12">
+      <h2 class="font-serif text-3xl md:text-4xl">Selected work</h2>
+      <p class="font-mono text-[13px] text-inksoft max-w-[34ch]">// Two projects that show both sides of how I work — shipping a product end to end, and turning research into change.</p>
+    </div>
+
+    <!-- CASE STUDY 1: ABIRC -->
+    <article class="border border-line rounded-lg overflow-hidden mb-8 bg-[#fbf9f3]">
+      <div class="h-1 w-full" style="background:linear-gradient(90deg,#165648,#E4A72E);"></div>
+      <div class="grid md:grid-cols-2">
+      <div class="bg-paper2 border-b md:border-b-0 md:border-r border-line flex items-center justify-center p-7">
+        <div class="bracket text-teal w-full h-full min-h-[260px] border border-dashed border-[#C9C2B1] flex flex-col items-center justify-center text-center gap-2 text-inksoft p-6">
+          <span class="font-mono text-[11px] tracking-widest uppercase text-inksoft">Placeholder</span>
+          <span class="font-serif text-xl text-inksoft">ABIRC Marketplace — cover</span>
+          <span class="text-[13.5px] max-w-[30ch] leading-relaxed text-inksoft">Michelle to add: hero image or product shot, 2–3 outcome metrics, link to full case study.</span>
+        </div>
+      </div>
+      <div class="p-8 md:p-10 flex flex-col">
+        <p class="font-mono text-[12px] tracking-widest uppercase text-teal mb-4">// End-to-end · e-commerce · accessibility</p>
+        <h3 class="font-serif text-[28px] md:text-[32px] mb-1.5">ABIRC Marketplace</h3>
+        <p class="font-mono text-[13px] text-teal mb-5">Asian Business Institute &amp; Resource Center — Sole UX Designer &amp; Web Manager</p>
+        <p class="mb-6 text-[16.5px]">I designed and launched ABIRC's first online marketplace and rebuilt their main website — giving local Asian-owned small businesses new visibility, and giving vendors, community members, and staff something far easier to use. I owned it end to end: research, usability testing, user flows, wireframes, and high-fidelity UI — plus moving grant applications, vendor registration, and event sign-ups online so the team could stop drowning in paperwork.</p>
+        <div class="flex flex-wrap gap-2 mb-7">
+          <span class="text-[12px] font-mono bg-teal/10 text-teal rounded-sm px-3 py-1.5">User research</span>
+          <span class="text-[12px] font-mono bg-teal/10 text-teal rounded-sm px-3 py-1.5">Usability testing</span>
+          <span class="text-[12px] font-mono bg-ochre/10 text-ochretext rounded-sm px-3 py-1.5">E-commerce</span>
+          <span class="text-[12px] font-mono bg-teal/10 text-teal rounded-sm px-3 py-1.5">Design systems</span>
+          <span class="text-[12px] font-mono bg-teal/10 text-teal rounded-sm px-3 py-1.5">Figma</span>
+        </div>
+        <a href="#" class="mt-auto inline-flex items-center gap-2 font-medium text-[15.5px] text-ink border-b-2 border-ochre pb-1 w-fit hover:text-teal transition-colors">Read the case study &rarr;</a>
+      </div>
+      </div>
+    </article>
+
+    <!-- CASE STUDY 2: SDSU -->
+    <article class="border border-line rounded-lg overflow-hidden mb-8 bg-[#fbf9f3]">
+      <div class="h-1 w-full" style="background:linear-gradient(90deg,#E4A72E,#165648);"></div>
+      <div class="grid md:grid-cols-2">
+      <div class="p-8 md:p-10 flex flex-col md:order-1">
+        <p class="font-mono text-[12px] tracking-widest uppercase text-teal mb-4">// Research · service design · higher education</p>
+        <h3 class="font-serif text-[28px] md:text-[32px] mb-1.5">The students behind the data</h3>
+        <p class="font-mono text-[13px] text-teal mb-5">San Diego State University — Senior Academic Advisor &amp; Researcher</p>
+        <p class="mb-6 text-[16.5px]">As a senior advisor, I surveyed trends across the student body to find the populations most at risk of falling behind, then designed solution-centered interventions and brought the evidence to executive leadership — work that contributed to a change at the university level. It's the closest thing I have to a service-design case study, and it's why I treat UX research as advocacy, not just data collection.</p>
+        <div class="flex flex-wrap gap-2 mb-7">
+          <span class="text-[12px] font-mono bg-teal/10 text-teal rounded-sm px-3 py-1.5">User research</span>
+          <span class="text-[12px] font-mono bg-teal/10 text-teal rounded-sm px-3 py-1.5">Journey mapping</span>
+          <span class="text-[12px] font-mono bg-ochre/10 text-ochretext rounded-sm px-3 py-1.5">Service design</span>
+          <span class="text-[12px] font-mono bg-teal/10 text-teal rounded-sm px-3 py-1.5">Data analysis</span>
+          <span class="text-[12px] font-mono bg-teal/10 text-teal rounded-sm px-3 py-1.5">Education</span>
+        </div>
+        <a href="#" class="mt-auto inline-flex items-center gap-2 font-medium text-[15.5px] text-ink border-b-2 border-ochre pb-1 w-fit hover:text-teal transition-colors">Read the case study &rarr;</a>
+      </div>
+      <div class="bg-paper2 border-t md:border-t-0 md:border-l border-line flex items-center justify-center p-7 md:order-2">
+        <div class="bracket text-ochretext w-full h-full min-h-[260px] border border-dashed border-[#C9C2B1] flex flex-col items-center justify-center text-center gap-2 text-inksoft p-6">
+          <span class="font-mono text-[11px] tracking-widest uppercase text-inksoft">Placeholder</span>
+          <span class="font-serif text-xl text-inksoft">San Diego State — cover</span>
+          <span class="text-[13.5px] max-w-[30ch] leading-relaxed text-inksoft">Michelle to add: cover visual (journey map, research artifact, or recreated advising form), the specific outcome, link to full case study.</span>
+        </div>
+      </div>
+      </div>
+    </article>
+  </div>
+
+  <!-- TEASER -->
+  <section class="py-20 border-t border-line mt-8">
+    <div class="max-w-[1180px] mx-auto px-7 grid md:grid-cols-2 gap-14 items-center">
+      <h2 class="font-serif text-[clamp(1.75rem,3.6vw,2.5rem)] max-w-[16ch]">I came to UX from ten years in classrooms and advising offices.</h2>
+      <div>
+        <p class="text-[18px] text-inksoft mb-6 leading-relaxed">That background isn't a detour on the way to design. It's the whole point. It's why I listen before I sketch, why I think in journeys, and why the first question I ask is always: who is this leaving out?</p>
+        <a href="about-alt2.html" class="inline-flex items-center gap-2 font-medium text-ink border-b-2 border-ochre pb-1 hover:text-teal transition-colors">More about how I work &rarr;</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="relative bg-tealdeep text-[#EDE9DF] py-[70px] overflow-hidden" id="contact">
+  <div class="absolute inset-0 opacity-[0.0224]" style="background-image:linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px); background-size:42px 42px;"></div>
+  <div class="max-w-[1180px] mx-auto px-7 relative">
+    <p class="font-mono text-[12px] tracking-widest uppercase text-[#A5CDC1] mb-5">// Let's connect</p>
+    <h2 class="font-serif text-[clamp(1.9rem,4.4vw,3rem)] text-[#F6F3EA] max-w-[16ch] mb-7">I'd love to hear what you're building.</h2>
+    <div class="flex flex-wrap gap-8 text-[17px] mb-11">
+      <a href="mailto:michellec.xiong@gmail.com" class="text-[#F6F3EA] border-b-2 border-ochre pb-1 font-medium hover:text-ochre transition-colors">michellec.xiong@gmail.com</a>
+      <a href="https://www.linkedin.com/in/michellecxiong" target="_blank" rel="noopener" class="text-[#F6F3EA] border-b-2 border-ochre pb-1 font-medium hover:text-ochre transition-colors">LinkedIn</a>
+    </div>
+    <div class="flex flex-wrap justify-between gap-4 border-t border-white/15 pt-6 font-mono text-[12.5px] text-[#A5CDC1] tracking-wide">
+      <span>Michelle Xiong — UX designer, researcher, educator</span>
+      <span>Portland, Oregon</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
