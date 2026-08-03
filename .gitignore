@@ -2,3 +2,17 @@
 !.gitignore
 !index.html
 !about.html
+!case-studies/
+!case-studies/**
+!assets/
+!assets/**
+
+# Unused source files not referenced by the live pages
+case-studies/images/ABIRC Marketplace Hero.mov
+case-studies/images/Farmer Profile Copy 2.png
+case-studies/images/Math Anxiety Cover.png
+case-studies/images/Meet Our Farmers Story.png
+case-studies/images/Multipage narrative ia.gif
+case-studies/images/SEED Framework.png
+case-studies/images/stakeholder-map.png
+assets/img/abirc/ABIRC_hero_photo.png
